@@ -262,13 +262,6 @@ export function Dashboard() {
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View Portfolio
                 </a>
-                <button
-                  onClick={handleResumeDownload}
-                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 hover:border-gray-300 transition-all shadow-sm hover:shadow"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Resume
-                </button>
               </div>
             </div>
           </div>

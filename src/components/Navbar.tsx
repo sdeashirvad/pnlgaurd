@@ -34,14 +34,14 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center space-x-4">
-            <NavActionButton
-              label="Resume"
-              icon={FileText}
-              variant="secondary"
-              onClick={handleResumeDownload}
-            />
+             <NavActionButton
+//               label="Resume"
+//               icon={FileText}
+//               variant="secondary"
+//               onClick={handleResumeDownload}
+//             />
 
-            <NavActionButton
+
               label="Portfolio"
               icon={ArrowRight}
               variant="primary"
