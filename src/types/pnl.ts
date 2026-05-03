@@ -23,7 +23,8 @@ export interface UploadResponse {
 }
 
 export interface CalculateResponse {
-  anomaliesCreated: number;
+  anomaliesInserted: number;
+  anomaliesUpdated: number;
 }
 
 export interface ExplanationResponse {

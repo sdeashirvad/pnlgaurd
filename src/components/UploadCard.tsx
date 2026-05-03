@@ -1,11 +1,11 @@
 import { useState, useRef } from 'react';
 import { Upload, FileText, Calculator, X, Check, ArrowRight } from 'lucide-react';
 import { pnlApi } from '../api/pnl';
-import type { UploadResponse, PnlRecord } from '../types/pnl';
+import type { UploadResponse, PnlRecord, CalculateResponse } from '../types/pnl';
 
 interface UploadCardProps {
   onUploadSuccess: (data: UploadResponse) => void;
-  onCalculateSuccess: (anomaliesCreated: number) => void;
+  onCalculateSuccess: (data: CalculateResponse) => void;
   onError: (message: string) => void;
 }
 
@@ -158,7 +158,7 @@ export function UploadCard({
 
     try {
       const response = await pnlApi.calculateAnomalies();
-      onCalculateSuccess(response.anomaliesCreated);
+      onCalculateSuccess(response);
     } catch (error) {
       onError('Failed to calculate anomalies');
     } finally {
